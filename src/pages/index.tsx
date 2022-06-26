@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
+import { api } from '../services/api';
 import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR'
-import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
 
 import styles from './home.module.scss'
@@ -60,12 +60,12 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
       <section className={styles.allEpisodes}>
       
         <h2>Todos episódios</h2>
-
+        
         <table cellSpacing={0}>
           <thead>
             <th></th>
             <th>Podcast</th>
-            <th>Integrante</th>
+            <th>Integrantes</th>
             <th>Data</th>
             <th>Duração</th>
             <th></th>
